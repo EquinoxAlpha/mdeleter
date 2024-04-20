@@ -26,7 +26,7 @@ pip install -r requirements.txt
 TOKEN=yourtoken python3 main.py
 ```
 
-Obviously you need to replace yourtoken with your Discord account's token. Doing this will be left as an exercise for the reader.
+Obviously you need to replace yourtoken with your Discord account's token. Finding the token will be left as an exercise for the reader.
 
 ## Configuration
 
