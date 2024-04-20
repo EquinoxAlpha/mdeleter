@@ -6,6 +6,7 @@ import json
 import inotify.adapters
 import threading
 import os
+import re
 
 TOKEN = os.getenv("TOKEN")
 if TOKEN is None:
@@ -28,7 +29,12 @@ def filter_message(message):
                     allow["channel"] == str(message.channel.id)
                     or allow["channel"] == "*"
                 ):
-                    return True
+                    if "content" not in allow:
+                        return True
+                    if allow["content"] == "*":
+                        return True
+                    if re.match(allow["content"], message.content):
+                        return True
 
     for deny in deny_filters:
         if deny["guild"] == str(
@@ -36,7 +42,12 @@ def filter_message(message):
         ):  # guild cannot be "*" for safety reasons
             if deny["user"] == str(message.author.id) or deny["user"] == "*":
                 if deny["channel"] == str(message.channel.id) or deny["channel"] == "*":
-                    return False
+                    if "content" not in deny:
+                        return False
+                    if deny["content"] == "*":
+                        return False
+                    if re.match(deny["content"], message.content):
+                        return False
 
     return True
 

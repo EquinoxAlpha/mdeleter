@@ -34,6 +34,8 @@ Check `deny.json` for an example on how to configure the allow/deny lists. `allo
 
 Users, guilds, and channels are specified by their ID. Users and channels can be wildcards, and for allow directives, guilds can be wildcards too.
 
+You can optionally specify `content`, which is a regex that the message will be matched against.
+
 ## Disclaimer
 
 Discord selfbots are against Discord's Terms of Service. But let's be honest, if you're reading this, you probably don't care, and I don't care either.
