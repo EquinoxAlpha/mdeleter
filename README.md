@@ -15,7 +15,7 @@ OS is assumed to be Linux.
 ```
 git clone https://github.com/EquinoxAlpha/mdeleter
 cd mdeleter
-python -m venv .
+python3 -m venv .
 soource ./bin/activate
 pip install -r requirements.txt
 ```
@@ -23,7 +23,7 @@ pip install -r requirements.txt
 ## Running
 
 ```
-TOKEN=yourtoken python main.py
+TOKEN=yourtoken python3 main.py
 ```
 
 Obviously you need to replace yourtoken with your Discord account's token. Doing this will be left as an exercise for the reader.
