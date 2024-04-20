@@ -2,7 +2,7 @@
 
 Creative name, I know.
 
-A Discord selfbot that deletes messages from select users or channels, with a live-reloadable and configurable allow/deny list, without explicitly banning them.
+A Discord selfbot that deletes messages from select users or channels, with a live-reloadable and configurable allow/deny list, without explicitly banning them. It does not retroactively delete old messages.
 
 Perfect for removing messages from users deemed annoying, without sending a message, so to speak.
 
