@@ -16,7 +16,7 @@ OS is assumed to be Linux.
 git clone https://github.com/EquinoxAlpha/mdeleter
 cd mdeleter
 python3 -m venv .
-soource ./bin/activate
+source ./bin/activate
 pip install -r requirements.txt
 ```
 
